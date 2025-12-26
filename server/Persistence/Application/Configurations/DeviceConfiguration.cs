@@ -10,6 +10,8 @@ public class DeviceConfiguration : IEntityTypeConfiguration<Device>
     {
         builder.HasKey(x => x.Id);
 
+        builder.Property(x => x.Id).ValueGeneratedOnAdd();
+
         builder.Property(x => x.AquariumId)
             .IsRequired();
 

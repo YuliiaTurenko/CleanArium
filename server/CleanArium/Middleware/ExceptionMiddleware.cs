@@ -23,6 +23,11 @@ public class ExceptionMiddleware
 
             context.Response.ContentType = "application/json";
 
+            Console.WriteLine($"SERVER ERROR: {ex.Message}");
+
+            if (ex.InnerException != null)
+                Console.WriteLine($"INNER ERROR: {ex.InnerException.Message}");
+
             switch (ex)
             {
                 case KeyNotFoundException:

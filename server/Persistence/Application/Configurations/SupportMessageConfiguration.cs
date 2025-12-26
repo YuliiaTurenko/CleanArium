@@ -10,6 +10,8 @@ public class SupportMessageConfiguration : IEntityTypeConfiguration<SupportMessa
     {
         builder.HasKey(x => x.Id);
 
+        builder.Property(x => x.Id).ValueGeneratedOnAdd();
+
         builder.Property(x => x.UserId)
             .IsRequired();
         

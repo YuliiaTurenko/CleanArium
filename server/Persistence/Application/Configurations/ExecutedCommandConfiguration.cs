@@ -10,6 +10,8 @@ public class ExecutedCommandConfiguration : IEntityTypeConfiguration<ExecutedCom
     {
         builder.HasKey(x => x.Id);
 
+        builder.Property(x => x.Id).ValueGeneratedOnAdd();
+
         builder.Property(x => x.DeviceId)
             .IsRequired();
 
