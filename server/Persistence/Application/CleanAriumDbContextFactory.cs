@@ -10,7 +10,7 @@ public class CleanAriumDbContextFactory : IDesignTimeDbContextFactory<CleanArium
     public CleanAriumDbContext CreateDbContext(string[] args)
     {
         var optionsBuilder = new DbContextOptionsBuilder<CleanAriumDbContext>();
-        optionsBuilder.UseSqlServer("CONNECTION_STRING",
+        optionsBuilder.UseSqlServer("DefaultConnection",
             builder => builder.MigrationsHistoryTable(HistoryRepository.DefaultTableName, "CleanArium"));
 
         return new CleanAriumDbContext(optionsBuilder.Options);

@@ -107,7 +107,6 @@ using (var scope = app.Services.CreateScope())
     try
     {
         var db = services.GetRequiredService<CleanAriumDbContext>();
-
         db.Database.Migrate();
 
         var seeder = scope.ServiceProvider.GetRequiredService<AdminSeeder>();
@@ -125,11 +124,8 @@ app.UseRouting();
 app.UseAuthentication();
 app.UseAuthorization();
 
-if (app.Environment.IsDevelopment())
-{
-    app.UseSwagger();
-    app.UseSwaggerUI();
-}
+app.UseSwagger();
+app.UseSwaggerUI();
 
 app.MapControllers();
 
