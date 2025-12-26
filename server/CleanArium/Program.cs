@@ -101,25 +101,25 @@ var app = builder.Build();
 
 Log.Information("Application starting");
 
-using (var scope = app.Services.CreateScope())
-{
-    var services = scope.ServiceProvider;
-    try
-    {
-        var db = services.GetRequiredService<CleanAriumDbContext>();
-        db.Database.Migrate();
+//using (var scope = app.Services.CreateScope())
+//{
+//    var services = scope.ServiceProvider;
+//    try
+//    {
+//        var db = services.GetRequiredService<CleanAriumDbContext>();
+//        db.Database.Migrate();
 
-        var seeder = scope.ServiceProvider.GetRequiredService<AdminSeeder>();
-        await seeder.SeedAsync();
-    }
-    catch (Exception ex)
-    {
-        Console.WriteLine(ex);
-    }
-}
+//        var seeder = scope.ServiceProvider.GetRequiredService<AdminSeeder>();
+//        await seeder.SeedAsync();
+//    }
+//    catch (Exception ex)
+//    {
+//        Console.WriteLine(ex);
+//    }
+//}
 
 app.UseMiddleware<ExceptionMiddleware>();
-app.UseHttpsRedirection();
+//app.UseHttpsRedirection();
 app.UseRouting();
 app.UseAuthentication();
 app.UseAuthorization();
