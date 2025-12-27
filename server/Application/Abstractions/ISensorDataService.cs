@@ -2,5 +2,5 @@
 
 public interface ISensorDataService
 {
-    Task SaveAsync(long userId, Domain.Models.SensorData data);
+    Task SaveAsync(Domain.Models.SensorData data);
 }

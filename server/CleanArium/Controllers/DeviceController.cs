@@ -94,10 +94,7 @@ public class DeviceController : ControllerBase
     [HttpPost("{deviceId:long}/sensor-data")]
     public async Task<IActionResult> AddSensorData([FromRoute] long deviceId, CreateSensorDataRequest request, CancellationToken ct)
     {
-        var userId = _userService.GetApplicationUserId()!.Value;
-
         var command = new CreateSensorDataCommand(
-            UserId: userId,
             DeviceId: deviceId,
             Value: request.Value,
             Unit: request.Unit

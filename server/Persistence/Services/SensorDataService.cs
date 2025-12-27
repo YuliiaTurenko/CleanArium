@@ -1,6 +1,7 @@
 ﻿using Application.Abstractions;
 using Domain.Models;
 using Persistence.Application;
+using Microsoft.EntityFrameworkCore;
 
 namespace Persistence.Services;
 
@@ -15,8 +16,13 @@ public class SensorDataService : ISensorDataService
         _processor = processor;
     }
 
-    public async Task SaveAsync(long userId, SensorData data)
+    public async Task SaveAsync(SensorData data)
     {
+        var userId = await _db.SensorData
+        .Where(d => d.Id == data.Id)
+        .Select(d => d.Device.Aquarium.UserId)
+        .FirstOrDefaultAsync();
+
         _db.SensorData.Add(data);
         await _db.SaveChangesAsync();
 

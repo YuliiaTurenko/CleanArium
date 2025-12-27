@@ -22,6 +22,6 @@ public class CreateSensorDataCommandHandler : IRequestHandler<CreateSensorDataCo
             DateTime = DateTime.UtcNow
         };
 
-        await _sensorDataService.SaveAsync(command.UserId, data);
+        await _sensorDataService.SaveAsync(data);
     }
 }
