@@ -10,6 +10,7 @@ using Microsoft.OpenApi.Models;
 using Persistence.Application;
 using Serilog;
 using Serilog.Events;
+using System;
 using System.Text;
 using System.Text.Json.Serialization;
 
@@ -117,6 +118,12 @@ Log.Information("Application starting");
 //        Console.WriteLine(ex);
 //    }
 //}
+
+builder.Services.AddDbContext<CleanAriumDbContext>(options =>
+{
+    options.EnableDetailedErrors();
+    options.EnableSensitiveDataLogging();
+});
 
 app.UseMiddleware<ExceptionMiddleware>();
 //app.UseHttpsRedirection();

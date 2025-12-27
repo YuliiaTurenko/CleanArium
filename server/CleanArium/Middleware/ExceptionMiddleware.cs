@@ -1,4 +1,7 @@
-﻿namespace CleanArium.Middleware;
+﻿using Microsoft.AspNetCore.Http.HttpResults;
+using Microsoft.EntityFrameworkCore;
+
+namespace CleanArium.Middleware;
 
 public class ExceptionMiddleware
 {
@@ -23,33 +26,42 @@ public class ExceptionMiddleware
 
             context.Response.ContentType = "application/json";
 
-            Console.WriteLine($"SERVER ERROR: {ex.Message}");
-
-            if (ex.InnerException != null)
-                Console.WriteLine($"INNER ERROR: {ex.InnerException.Message}");
+            int statusCode;
+            string message;
 
             switch (ex)
             {
+                case DbUpdateException dbEx:
+                    statusCode = StatusCodes.Status400BadRequest;
+                    message = dbEx.InnerException?.Message ?? dbEx.Message;
+                    break;
+
                 case KeyNotFoundException:
-                    context.Response.StatusCode = StatusCodes.Status404NotFound;
+                    statusCode = StatusCodes.Status404NotFound;
+                    message = ex.Message;
                     break;
 
                 case UnauthorizedAccessException:
-                    context.Response.StatusCode = StatusCodes.Status401Unauthorized;
+                    statusCode = StatusCodes.Status401Unauthorized;
+                    message = ex.Message;
                     break;
 
                 case ArgumentException:
-                    context.Response.StatusCode = StatusCodes.Status400BadRequest;
+                    statusCode = StatusCodes.Status400BadRequest;
+                    message = ex.Message;
                     break;
 
                 default:
-                    context.Response.StatusCode = StatusCodes.Status500InternalServerError;
+                    statusCode = StatusCodes.Status500InternalServerError;
+                    message = "Internal server error";
                     break;
             }
 
+            context.Response.StatusCode = statusCode;
+
             await context.Response.WriteAsJsonAsync(new
             {
-                error = ex.Message
+                error = message
             });
         }
     }
