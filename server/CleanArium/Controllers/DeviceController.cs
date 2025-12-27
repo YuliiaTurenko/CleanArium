@@ -122,19 +122,12 @@ public class DeviceController : ControllerBase
         return Ok();
     }
 
-    //[Authorize(Roles = "User,Admin,Moderator")]
     [HttpGet("executed-commands-by-device/{deviceId:long}")]
     public async Task<IActionResult> GetAllExecutedCommandsByDevice(long deviceId, CancellationToken ct)
     {
-        var userId = _userService.GetApplicationUserId()!.Value;
-
-        var query = new GetExecutedCommandsByDeviceIdQuery(userId, deviceId);
+        var query = new GetExecutedCommandsByDeviceIdQuery(deviceId);
         var result = await _mediator.Send(query, ct);
 
         return Ok(result);
     }
-
-    [HttpGet("ping")]
-    public IActionResult Ping() => Ok("pong");
-
 }

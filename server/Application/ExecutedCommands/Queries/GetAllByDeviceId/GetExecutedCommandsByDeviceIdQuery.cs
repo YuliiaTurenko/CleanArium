@@ -3,4 +3,4 @@ using MediatR;
 
 namespace Application.ExecutedCommands.Queries.GetAllByDeviceId;
 
-public record GetExecutedCommandsByDeviceIdQuery(long UserId, long DeviceId) : IRequest<List<ExecutedCommandDto>>;
+public record GetExecutedCommandsByDeviceIdQuery(long DeviceId) : IRequest<List<ExecutedCommandDto>>;

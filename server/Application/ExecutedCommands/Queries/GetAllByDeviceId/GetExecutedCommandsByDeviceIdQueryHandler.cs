@@ -30,7 +30,7 @@ public class GetExecutedCommandsByDeviceIdQueryHandler : IRequestHandler<GetExec
         })
         .ToList();
 
-        _logger.LogInformation("USER_ACTION Successfully retrieved executed commands for User: {Id} ", request.UserId);
+        _logger.LogInformation("USER_ACTION Successfully retrieved executed commands of Device: {Id} ", request.DeviceId);
 
         return list;
     }
