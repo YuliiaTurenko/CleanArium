@@ -3,20 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\User\\source\\repos\\CleanArium\\server\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{28989432-BC33-409D-971D-B1F5DF339742}|Persistence\\Persistence.csproj|c:\\users\\user\\source\\repos\\cleanarium\\server\\persistence\\services\\alarmruleprocessor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{28989432-BC33-409D-971D-B1F5DF339742}|Persistence\\Persistence.csproj|solutionrelative:persistence\\services\\alarmruleprocessor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{200804AF-02D1-4F3C-922D-11EA3024C5B6}|CleanArium\\CleanArium.csproj|c:\\users\\user\\source\\repos\\cleanarium\\server\\cleanarium\\controllers\\devicecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{200804AF-02D1-4F3C-922D-11EA3024C5B6}|CleanArium\\CleanArium.csproj|solutionrelative:cleanarium\\controllers\\devicecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{200804AF-02D1-4F3C-922D-11EA3024C5B6}|CleanArium\\CleanArium.csproj|c:\\users\\user\\source\\repos\\cleanarium\\server\\cleanarium\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{200804AF-02D1-4F3C-922D-11EA3024C5B6}|CleanArium\\CleanArium.csproj|solutionrelative:cleanarium\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{200804AF-02D1-4F3C-922D-11EA3024C5B6}|CleanArium\\CleanArium.csproj|c:\\users\\user\\source\\repos\\cleanarium\\server\\cleanarium\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{200804AF-02D1-4F3C-922D-11EA3024C5B6}|CleanArium\\CleanArium.csproj|solutionrelative:cleanarium\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C1B93A35-30DB-4586-9E93-4EC6D8AE470D}|Infrastructure\\Infrastructure.csproj|c:\\users\\user\\source\\repos\\cleanarium\\server\\infrastructure\\adminseed\\adminseeder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C1B93A35-30DB-4586-9E93-4EC6D8AE470D}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\adminseed\\adminseeder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{200804AF-02D1-4F3C-922D-11EA3024C5B6}|CleanArium\\CleanArium.csproj|c:\\users\\user\\source\\repos\\cleanarium\\server\\cleanarium\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{200804AF-02D1-4F3C-922D-11EA3024C5B6}|CleanArium\\CleanArium.csproj|solutionrelative:cleanarium\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,47 +22,47 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "AdminSeeder.cs",
-              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\CleanArium\\server\\Infrastructure\\AdminSeed\\AdminSeeder.cs",
-              "RelativeDocumentMoniker": "Infrastructure\\AdminSeed\\AdminSeeder.cs",
-              "ToolTip": "C:\\Users\\User\\source\\repos\\CleanArium\\server\\Infrastructure\\AdminSeed\\AdminSeeder.cs",
-              "RelativeToolTip": "Infrastructure\\AdminSeed\\AdminSeeder.cs",
-              "ViewState": "AgIAABwAAAAAAAAAAADwvzQAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-08T19:20:02.732Z",
-              "IsPinned": true
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "DeviceController.cs",
-              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\CleanArium\\server\\CleanArium\\Controllers\\DeviceController.cs",
-              "RelativeDocumentMoniker": "CleanArium\\Controllers\\DeviceController.cs",
-              "ToolTip": "C:\\Users\\User\\source\\repos\\CleanArium\\server\\CleanArium\\Controllers\\DeviceController.cs",
-              "RelativeToolTip": "CleanArium\\Controllers\\DeviceController.cs",
-              "ViewState": "AgIAAHEAAAAAAAAAAAAowIUAAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-21T01:20:23.188Z",
+              "DocumentIndex": 2,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\CleanArium\\server\\CleanArium\\appsettings.json",
+              "RelativeDocumentMoniker": "CleanArium\\appsettings.json",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\CleanArium\\server\\CleanArium\\appsettings.json",
+              "RelativeToolTip": "CleanArium\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-12-26T21:16:02.438Z",
               "IsPinned": true,
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "launchSettings.json",
-              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\CleanArium\\server\\CleanArium\\Properties\\launchSettings.json",
-              "RelativeDocumentMoniker": "CleanArium\\Properties\\launchSettings.json",
-              "ToolTip": "C:\\Users\\User\\source\\repos\\CleanArium\\server\\CleanArium\\Properties\\launchSettings.json",
-              "RelativeToolTip": "CleanArium\\Properties\\launchSettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAvAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-12-21T01:52:05.384Z",
+              "Title": "DeviceController.cs",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\CleanArium\\server\\CleanArium\\Controllers\\DeviceController.cs",
+              "RelativeDocumentMoniker": "CleanArium\\Controllers\\DeviceController.cs",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\CleanArium\\server\\CleanArium\\Controllers\\DeviceController.cs",
+              "RelativeToolTip": "CleanArium\\Controllers\\DeviceController.cs",
+              "ViewState": "AgIAAFcAAAAAAAAAAAAowGwAAABvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-27T03:46:43.485Z",
               "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "AlarmRuleProcessor.cs",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\CleanArium\\server\\Persistence\\Services\\AlarmRuleProcessor.cs",
+              "RelativeDocumentMoniker": "Persistence\\Services\\AlarmRuleProcessor.cs",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\CleanArium\\server\\Persistence\\Services\\AlarmRuleProcessor.cs",
+              "RelativeToolTip": "Persistence\\Services\\AlarmRuleProcessor.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAzwCMAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-27T10:12:48.812Z",
               "EditorCaption": ""
             },
             {
@@ -76,19 +72,6 @@
             {
               "$type": "Bookmark",
               "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\CleanArium\\server\\CleanArium\\Program.cs",
-              "RelativeDocumentMoniker": "CleanArium\\Program.cs",
-              "ToolTip": "C:\\Users\\User\\source\\repos\\CleanArium\\server\\CleanArium\\Program.cs",
-              "RelativeToolTip": "CleanArium\\Program.cs",
-              "ViewState": "AgIAAF0AAAAAAAAAAAAAAGEAAAAaAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-23T14:09:36.87Z",
-              "EditorCaption": ""
             }
           ]
         },

@@ -1,4 +1,4 @@
 #pragma once
 #include <Arduino.h>
 
-void processCommands(const String& json);
+bool processCommands(const String& json);

@@ -368,7 +368,8 @@ C:\Users\User\source\repos\CleanArium\server\CleanArium\obj\Debug\net8.0\staticw
 C:\Users\User\source\repos\CleanArium\server\CleanArium\obj\Debug\net8.0\staticwebassets.build.json.cache
 C:\Users\User\source\repos\CleanArium\server\CleanArium\obj\Debug\net8.0\staticwebassets.development.json
 C:\Users\User\source\repos\CleanArium\server\CleanArium\obj\Debug\net8.0\staticwebassets.build.endpoints.json
-C:\Users\User\source\repos\CleanArium\server\CleanArium\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
 C:\Users\User\source\repos\CleanArium\server\CleanArium\obj\Debug\net8.0\CleanArium.csproj.Up2Date
 C:\Users\User\source\repos\CleanArium\server\CleanArium\obj\Debug\net8.0\CleanArium.genruntimeconfig.cache
 C:\Users\User\source\repos\CleanArium\server\CleanArium\obj\Debug\net8.0\ref\CleanArium.dll
+C:\Users\User\source\repos\CleanArium\server\CleanArium\obj\Debug\net8.0\CleanArium.sourcelink.json
+C:\Users\User\source\repos\CleanArium\server\CleanArium\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt

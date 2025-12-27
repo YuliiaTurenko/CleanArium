@@ -996,18 +996,6 @@
         }
       }
     },
-    "/api/Device/ping": {
-      "get": {
-        "tags": [
-          "Device"
-        ],
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
-      }
-    },
     "/api/Notification/get-all": {
       "get": {
         "tags": [

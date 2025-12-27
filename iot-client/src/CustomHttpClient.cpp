@@ -1,13 +1,11 @@
 #include "CustomHttpClient.h"
 #include "config.h"
 #include <HTTPClient.h>
-// #include <WiFiClient.h>
 #include <WiFiClientSecure.h>
 #include <ArduinoJson.h>
 
 void sendSensorData(const SensorReading& reading) {
   HTTPClient http;
-  // WiFiClient client;
   WiFiClientSecure client;
   client.setInsecure();
 
@@ -16,8 +14,8 @@ void sendSensorData(const SensorReading& reading) {
   http.addHeader("Content-Type", "application/json");
 
   StaticJsonDocument<128> doc;
-  doc["value"] = reading.value;
-  doc["unit"] = reading.unit;
+  doc["Value"] = reading.value;
+  doc["Unit"] = reading.unit;
 
   String body;
   serializeJson(doc, body);
@@ -28,24 +26,24 @@ void sendSensorData(const SensorReading& reading) {
   http.end();
 }
 
-void sendExecutedCommand(int commandType, int status) {
+void sendExecutedCommand(int type, int status) {
   HTTPClient http;
-  // WiFiClient client;
   WiFiClientSecure client;
   client.setInsecure();
 
   String url = String(BASE_URL) + "/api/Device/" + DEVICE_ID + "/executed-commands";
   http.begin(client, url);
   http.addHeader("Content-Type", "application/json");
+  http.addHeader("Accept", "application/json");
 
   StaticJsonDocument<128> doc;
-  doc["commandType"] = commandType;
-  doc["commandStatus"] = status;
+  doc["CommandType"] = (type == 0) ? 3 : type;
+  doc["CommandStatus"] = status;
 
   String body;
   serializeJson(doc, body);
   int code = http.POST(body);
-
+  
   Serial.println("POST executed command: " + String(code));
 
   http.end();
@@ -53,7 +51,6 @@ void sendExecutedCommand(int commandType, int status) {
 
 String fetchCommands() {
   HTTPClient http;
-  // WiFiClient client;
   WiFiClientSecure client;
   client.setInsecure();
 

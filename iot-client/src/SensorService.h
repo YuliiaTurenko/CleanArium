@@ -1,5 +1,6 @@
 #pragma once
 #include <Arduino.h>
+#include "config.h"
 
 struct SensorReading {
   float value;
@@ -7,5 +8,7 @@ struct SensorReading {
 };
 
 SensorReading readTemperature();
+float getAverageTemperature();
+float calculateDangerLevel(float avgTemp);
 SensorReading readPh();
 SensorReading readWaterLevel();

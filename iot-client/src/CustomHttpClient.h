@@ -2,5 +2,5 @@
 #include "SensorService.h"
 
 void sendSensorData(const SensorReading& reading);
-void sendExecutedCommand(int commandType, int status);
+void sendExecutedCommand(int type, int status);
 String fetchCommands();

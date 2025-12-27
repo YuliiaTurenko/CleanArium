@@ -7,7 +7,7 @@ public class CreateExecutedCommandValidator : AbstractValidator<CreateExecutedCo
     public CreateExecutedCommandValidator()
     {
         RuleFor(x => x.DeviceId).GreaterThan(0);
-        RuleFor(x => x.CommandType).IsInEnum();
-        RuleFor(x => x.CommandStatus).IsInEnum();
+        RuleFor(x => x.CommandType).NotEmpty();
+        RuleFor(x => x.CommandStatus).NotEmpty();
     }
 }

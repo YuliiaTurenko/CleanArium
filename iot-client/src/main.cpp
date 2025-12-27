@@ -42,20 +42,41 @@ void setup() {
 
 void loop() {
   Serial.println("Loop running...");
-
   unsigned long now = millis();
 
   if (now - lastSensor > SENSOR_INTERVAL_MS) {
-    sendSensorData(readTemperature());
-    // sendSensorData(readPh());
-    // sendSensorData(readWaterLevel());
+    if (DEVICE_TYPE == DEVICE_HEATER) { 
+      SensorReading t = readTemperature();
+      sendSensorData(t);
+
+      float avg = getAverageTemperature();
+      float danger = calculateDangerLevel(avg);
+
+      Serial.println("Avg temp: " + String(avg));
+      Serial.println("Danger level: " + String(danger));
+
+      if (danger > 0.7f) {
+        sendExecutedCommand(3, 3);
+        Serial.println("Auto command triggered");
+        lampBlink(500);
+      }
+    }
+
+    if (DEVICE_TYPE == DEVICE_SENSOR) {
+      sendSensorData(readPh());
+      sendSensorData(readWaterLevel());
+    }
+
     lastSensor = now;
   }
 
   if (now - lastCommands > COMMAND_INTERVAL_MS) {
     String cmds = fetchCommands();
-    lampBlink();
-    processCommands(cmds);
+    
+    if (processCommands(cmds)) {
+      lampBlink(300); 
+    }
+
     lastCommands = now;
   }
 

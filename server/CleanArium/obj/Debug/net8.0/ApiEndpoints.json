@@ -565,16 +565,6 @@
   },
   {
     "ContainingType": "CleanArium.Controllers.DeviceController",
-    "Method": "Ping",
-    "RelativePath": "api/Device/ping",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "CleanArium.Controllers.DeviceController",
     "Method": "Update",
     "RelativePath": "api/Device/update",
     "HttpMethod": "PUT",
