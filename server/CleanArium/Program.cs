@@ -119,12 +119,6 @@ Log.Information("Application starting");
 //    }
 //}
 
-builder.Services.AddDbContext<CleanAriumDbContext>(options =>
-{
-    options.EnableDetailedErrors();
-    options.EnableSensitiveDataLogging();
-});
-
 app.UseMiddleware<ExceptionMiddleware>();
 //app.UseHttpsRedirection();
 app.UseRouting();
