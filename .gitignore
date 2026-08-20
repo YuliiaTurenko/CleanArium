@@ -1,0 +1,6 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/frontend/cleanarium-api.tar
+/frontend/cleanarium-web.tar
