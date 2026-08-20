@@ -28,6 +28,12 @@ public class NotificationRepository : INotificationRepository
             .ToListAsync();
     }
 
+    public async Task<int> CountUnreadAsync(long userId)
+    {
+        return await _db.Notifications
+            .CountAsync(x => x.UserId == userId && !x.IsRead);
+    }
+
     public async Task MarkAsReadAsync(long notificationId)
     {
         var n = await _db.Notifications.FirstOrDefaultAsync(x => x.Id == notificationId);

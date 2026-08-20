@@ -1,11 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Application.DTOs.SensorsData;
+using MediatR;
 
 namespace Application.SensorData.Queries.GetLatestByDeviceId;
 
-public record GetLatestSensorDataByDeviceIdQuery
-{
-}
+public record GetLatestSensorDataByDeviceIdQuery(long DeviceId) : IRequest<SensorDataDto>;

@@ -1,6 +1,7 @@
 ﻿using Application.Abstractions;
 using Application.Notifications.Commands.MarkAsRead;
 using Application.Notifications.Queries.GetAllByUserId;
+using Application.Notifications.Queries.GetUnreadCount;
 using MediatR;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -42,4 +43,14 @@ public class NotificationController : ControllerBase
         return Ok();
     }
 
+    [HttpGet("unread-count")]
+    public async Task<IActionResult> GetUnreadCount(CancellationToken ct)
+    {
+        var userId = _userService.GetApplicationUserId()!.Value;
+
+        var result = await _mediator.Send(
+            new GetUnreadNotificationsCountQuery(userId),ct);
+
+        return Ok(result);
+    }
 }

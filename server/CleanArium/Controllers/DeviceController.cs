@@ -6,6 +6,7 @@ using Application.Devices.Queries.GetAllByAquariumId;
 using Application.ExecutedCommands.Commands.Create;
 using Application.ExecutedCommands.Queries.GetAllByDeviceId;
 using Application.SensorData.Commands.Create;
+using Application.SensorData.Queries.GetLatestByDeviceId;
 using CleanArium.Contracts.Devices;
 using MediatR;
 using Microsoft.AspNetCore.Authorization;
@@ -91,6 +92,16 @@ public class DeviceController : ControllerBase
         return Ok(result);
     }
 
+    [Authorize(Roles = "User")]
+    [HttpGet("get-sensor-data/{deviceId:long}")]
+    public async Task<IActionResult> GetLatestSensorData(long deviceId, CancellationToken ct)
+    {
+        var query = new GetLatestSensorDataByDeviceIdQuery(deviceId);
+        var result = await _mediator.Send(query, ct);
+
+        return Ok(result);
+    }
+
     [HttpPost("{deviceId:long}/sensor-data")]
     public async Task<IActionResult> AddSensorData([FromRoute] long deviceId, CreateSensorDataRequest request, CancellationToken ct)
     {
@@ -105,7 +116,7 @@ public class DeviceController : ControllerBase
         return Ok();
     }
 
-    [HttpPost("{deviceId:long}/executed-commands")]
+    [HttpPost("{deviceId:long}/executed-command")]
     public async Task<IActionResult> AddExecutedCommand([FromRoute] long deviceId, CreateExecutedCommandRequest request, CancellationToken ct)
     {
         var command = new CreateExecutedCommand(

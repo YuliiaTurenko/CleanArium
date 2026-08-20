@@ -3,12 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\User\\source\\repos\\CleanArium\\server\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{28989432-BC33-409D-971D-B1F5DF339742}|Persistence\\Persistence.csproj|c:\\users\\user\\source\\repos\\cleanarium\\server\\persistence\\services\\alarmruleprocessor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{28989432-BC33-409D-971D-B1F5DF339742}|Persistence\\Persistence.csproj|solutionrelative:persistence\\services\\alarmruleprocessor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C1B93A35-30DB-4586-9E93-4EC6D8AE470D}|Infrastructure\\Infrastructure.csproj|c:\\users\\user\\source\\repos\\cleanarium\\server\\infrastructure\\services\\kubernetesconfiggenerator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C1B93A35-30DB-4586-9E93-4EC6D8AE470D}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\services\\kubernetesconfiggenerator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{200804AF-02D1-4F3C-922D-11EA3024C5B6}|CleanArium\\CleanArium.csproj|c:\\users\\user\\source\\repos\\cleanarium\\server\\cleanarium\\controllers\\devicecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{200804AF-02D1-4F3C-922D-11EA3024C5B6}|CleanArium\\CleanArium.csproj|solutionrelative:cleanarium\\controllers\\devicecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C1B93A35-30DB-4586-9E93-4EC6D8AE470D}|Infrastructure\\Infrastructure.csproj|c:\\users\\user\\source\\repos\\cleanarium\\server\\infrastructure\\services\\kubernetesservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C1B93A35-30DB-4586-9E93-4EC6D8AE470D}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\services\\kubernetesservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{200804AF-02D1-4F3C-922D-11EA3024C5B6}|CleanArium\\CleanArium.csproj|c:\\users\\user\\source\\repos\\cleanarium\\server\\cleanarium\\controllers\\kubernetescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{200804AF-02D1-4F3C-922D-11EA3024C5B6}|CleanArium\\CleanArium.csproj|solutionrelative:cleanarium\\controllers\\kubernetescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{200804AF-02D1-4F3C-922D-11EA3024C5B6}|CleanArium\\CleanArium.csproj|c:\\users\\user\\source\\repos\\cleanarium\\server\\cleanarium\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
@@ -22,49 +26,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 4,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\CleanArium\\server\\CleanArium\\appsettings.json",
-              "RelativeDocumentMoniker": "CleanArium\\appsettings.json",
-              "ToolTip": "C:\\Users\\User\\source\\repos\\CleanArium\\server\\CleanArium\\appsettings.json",
-              "RelativeToolTip": "CleanArium\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAGAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-12-26T21:16:02.438Z",
-              "IsPinned": true,
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "DeviceController.cs",
-              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\CleanArium\\server\\CleanArium\\Controllers\\DeviceController.cs",
-              "RelativeDocumentMoniker": "CleanArium\\Controllers\\DeviceController.cs",
-              "ToolTip": "C:\\Users\\User\\source\\repos\\CleanArium\\server\\CleanArium\\Controllers\\DeviceController.cs",
-              "RelativeToolTip": "CleanArium\\Controllers\\DeviceController.cs",
-              "ViewState": "AgIAAFcAAAAAAAAAAAAowGwAAABvAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-27T03:46:43.485Z",
-              "IsPinned": true,
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "AlarmRuleProcessor.cs",
-              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\CleanArium\\server\\Persistence\\Services\\AlarmRuleProcessor.cs",
-              "RelativeDocumentMoniker": "Persistence\\Services\\AlarmRuleProcessor.cs",
-              "ToolTip": "C:\\Users\\User\\source\\repos\\CleanArium\\server\\Persistence\\Services\\AlarmRuleProcessor.cs",
-              "RelativeToolTip": "Persistence\\Services\\AlarmRuleProcessor.cs",
-              "ViewState": "AgIAAA0AAAAAAAAAAAAzwCMAAAAaAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-27T10:12:48.812Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
@@ -72,6 +35,58 @@
             {
               "$type": "Bookmark",
               "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\CleanArium\\server\\CleanArium\\appsettings.json",
+              "RelativeDocumentMoniker": "CleanArium\\appsettings.json",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\CleanArium\\server\\CleanArium\\appsettings.json",
+              "RelativeToolTip": "CleanArium\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-06-03T12:58:51.009Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "KubernetesController.cs",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\CleanArium\\server\\CleanArium\\Controllers\\KubernetesController.cs",
+              "RelativeDocumentMoniker": "CleanArium\\Controllers\\KubernetesController.cs",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\CleanArium\\server\\CleanArium\\Controllers\\KubernetesController.cs",
+              "RelativeToolTip": "CleanArium\\Controllers\\KubernetesController.cs",
+              "ViewState": "AgIAACsAAAAAAAAAAAAkwA4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-02T21:37:21.94Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "KubernetesConfigGenerator.cs",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\CleanArium\\server\\Infrastructure\\Services\\KubernetesConfigGenerator.cs",
+              "RelativeDocumentMoniker": "Infrastructure\\Services\\KubernetesConfigGenerator.cs",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\CleanArium\\server\\Infrastructure\\Services\\KubernetesConfigGenerator.cs",
+              "RelativeToolTip": "Infrastructure\\Services\\KubernetesConfigGenerator.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAFYAAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-03T09:47:03.663Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "KubernetesService.cs",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\CleanArium\\server\\Infrastructure\\Services\\KubernetesService.cs",
+              "RelativeDocumentMoniker": "Infrastructure\\Services\\KubernetesService.cs",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\CleanArium\\server\\Infrastructure\\Services\\KubernetesService.cs",
+              "RelativeToolTip": "Infrastructure\\Services\\KubernetesService.cs",
+              "ViewState": "AgIAAEsAAAAAAAAAAAAowEsAAABEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-02T21:20:03.675Z",
+              "EditorCaption": ""
             }
           ]
         },

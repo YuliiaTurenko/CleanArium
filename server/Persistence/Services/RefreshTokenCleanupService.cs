@@ -3,7 +3,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Hosting;
 
-namespace Persistence.Services.Token;
+namespace Persistence.Services;
 
 public class RefreshTokenCleanupService : BackgroundService
 {

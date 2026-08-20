@@ -460,7 +460,7 @@
   {
     "ContainingType": "CleanArium.Controllers.DeviceController",
     "Method": "AddExecutedCommand",
-    "RelativePath": "api/Device/{deviceId}/executed-commands",
+    "RelativePath": "api/Device/{deviceId}/executed-command",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -565,6 +565,22 @@
   },
   {
     "ContainingType": "CleanArium.Controllers.DeviceController",
+    "Method": "GetLatestSensorData",
+    "RelativePath": "api/Device/get-sensor-data/{deviceId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "deviceId",
+        "Type": "System.Int64",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CleanArium.Controllers.DeviceController",
     "Method": "Update",
     "RelativePath": "api/Device/update",
     "HttpMethod": "PUT",
@@ -603,6 +619,16 @@
         "IsRequired": true
       }
     ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CleanArium.Controllers.NotificationController",
+    "Method": "GetUnreadCount",
+    "RelativePath": "api/Notification/unread-count",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
     "ReturnTypes": []
   },
   {

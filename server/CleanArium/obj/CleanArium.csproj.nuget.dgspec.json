@@ -150,6 +150,10 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "KubernetesClient": {
+              "target": "Package",
+              "version": "[19.0.2, )"
+            },
             "Microsoft.AspNetCore.Authentication.JwtBearer": {
               "target": "Package",
               "version": "[8.0.18, )"
@@ -163,6 +167,10 @@
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
               "version": "[8.0.18, )"
+            },
+            "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": {
+              "target": "Package",
+              "version": "[1.22.1, )"
             },
             "Serilog": {
               "target": "Package",
@@ -324,6 +332,12 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
+          "dependencies": {
+            "KubernetesClient": {
+              "target": "Package",
+              "version": "[19.0.2, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

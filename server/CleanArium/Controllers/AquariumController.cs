@@ -7,7 +7,6 @@ using Application.Aquariums.Queries.ExportAquariumsCsv;
 using Application.Aquariums.Queries.ExportAquariumsJson;
 using Application.Aquariums.Queries.ExportAquariumsPdf;
 using Application.Aquariums.Queries.GetAllByUserId;
-using Application.DTOs.Aquariums;
 using CleanArium.Contracts.Aquariums;
 using MediatR;
 using Microsoft.AspNetCore.Authorization;

@@ -46,12 +46,6 @@ public class ScheduledCommandRepository : IScheduledCommandRepository
         await _db.SaveChangesAsync();
     }
 
-    public async Task<bool> ScheduledCommandBelongsToUserAsync(long scheduledCommandId, long userId)
-    {
-        return await _db.ScheduledCommands
-            .AnyAsync(x => x.Id == scheduledCommandId && x.Device.Aquarium.UserId == userId);
-    }
-
     public async Task<int> CountByDevice(long deviceId, CancellationToken ct)
     {
         return await _db.ScheduledCommands

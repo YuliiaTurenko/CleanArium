@@ -10,11 +10,24 @@ using Microsoft.OpenApi.Models;
 using Persistence.Application;
 using Serilog;
 using Serilog.Events;
-using System;
 using System.Text;
 using System.Text.Json.Serialization;
 
 var builder = WebApplication.CreateBuilder(args);
+
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowAllOrigins", policy =>
+    {
+        policy.WithOrigins(
+            "http://localhost:3000", 
+            "https://localhost:3000",
+            "http://localhost:30080")
+              .AllowAnyHeader()
+              .AllowAnyMethod()
+              .AllowCredentials();
+    });
+});
 
 builder.Services.AddProjectServices(builder.Configuration);
 
@@ -45,7 +58,7 @@ builder.Services.AddAuthorization(options =>
 builder.Services.AddControllers()
     .AddJsonOptions(opts =>
     {
-        opts.JsonSerializerOptions.Converters.Add(new JsonStringEnumConverter());
+        //opts.JsonSerializerOptions.Converters.Add(new JsonStringEnumConverter());
         opts.JsonSerializerOptions.PropertyNameCaseInsensitive = true;
     });
 
@@ -102,32 +115,32 @@ var app = builder.Build();
 
 Log.Information("Application starting");
 
-//using (var scope = app.Services.CreateScope())
-//{
-//    var services = scope.ServiceProvider;
-//    try
-//    {
-//        var db = services.GetRequiredService<CleanAriumDbContext>();
-//        db.Database.Migrate();
+try
+{
+    using var scope = app.Services.CreateScope();
+    var db = scope.ServiceProvider.GetRequiredService<CleanAriumDbContext>();
 
-//        var seeder = scope.ServiceProvider.GetRequiredService<AdminSeeder>();
-//        await seeder.SeedAsync();
-//    }
-//    catch (Exception ex)
-//    {
-//        Console.WriteLine(ex);
-//    }
-//}
+    db.Database.Migrate();
+
+    Log.Information("DATABASE MIGRATION COMPLETED");
+
+    var adminSeeder = scope.ServiceProvider.GetRequiredService<AdminSeeder>();
+    await adminSeeder.SeedAsync();
+}
+catch (Exception ex)
+{
+    Log.Fatal(ex, "DATABASE MIGRATION FAILED");
+    throw;
+}
 
 app.UseMiddleware<ExceptionMiddleware>();
+app.UseCors("AllowAllOrigins");
 //app.UseHttpsRedirection();
 app.UseRouting();
+
 app.UseAuthentication();
 app.UseAuthorization();
-
 app.UseSwagger();
 app.UseSwaggerUI();
-
 app.MapControllers();
-
 app.Run();

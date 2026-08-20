@@ -889,6 +889,29 @@
         }
       }
     },
+    "/api/Device/get-sensor-data/{deviceId}": {
+      "get": {
+        "tags": [
+          "Device"
+        ],
+        "parameters": [
+          {
+            "name": "deviceId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api/Device/{deviceId}/sensor-data": {
       "post": {
         "tags": [
@@ -931,7 +954,7 @@
         }
       }
     },
-    "/api/Device/{deviceId}/executed-commands": {
+    "/api/Device/{deviceId}/executed-command": {
       "post": {
         "tags": [
           "Device"
@@ -1023,6 +1046,18 @@
               "format": "int64"
             }
           }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Notification/unread-count": {
+      "get": {
+        "tags": [
+          "Notification"
         ],
         "responses": {
           "200": {
@@ -1524,32 +1559,35 @@
     "schemas": {
       "CommandStatus": {
         "enum": [
-          "Pending",
-          "Sent",
-          "Executed",
-          "Failed"
+          1,
+          2,
+          3,
+          4
         ],
-        "type": "string"
+        "type": "integer",
+        "format": "int32"
       },
       "CommandType": {
         "enum": [
-          "TurnOn",
-          "TurnOff",
-          "SetValue",
-          "Calibrate"
+          1,
+          2,
+          3,
+          4
         ],
-        "type": "string"
+        "type": "integer",
+        "format": "int32"
       },
       "ConditionType": {
         "enum": [
-          "Less",
-          "Greater",
-          "LessOrEqual",
-          "GreaterOrEqual",
-          "Equal",
-          "NotEqual"
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
         ],
-        "type": "string"
+        "type": "integer",
+        "format": "int32"
       },
       "CreateAlarmRuleRequest": {
         "type": "object",
@@ -1676,21 +1714,23 @@
       },
       "DeviceStatus": {
         "enum": [
-          "On",
-          "Off",
-          "Unknown"
+          1,
+          2,
+          3
         ],
-        "type": "string"
+        "type": "integer",
+        "format": "int32"
       },
       "DeviceType": {
         "enum": [
-          "Heater",
-          "Light",
-          "OxygenPump",
-          "Filter",
-          "Feeder"
+          1,
+          2,
+          3,
+          4,
+          5
         ],
-        "type": "string"
+        "type": "integer",
+        "format": "int32"
       },
       "ForgotPasswordRequest": {
         "type": "object",
@@ -1756,12 +1796,13 @@
       },
       "RepeatMode": {
         "enum": [
-          "None",
-          "Daily",
-          "Weekly",
-          "Interval"
+          1,
+          2,
+          3,
+          4
         ],
-        "type": "string"
+        "type": "integer",
+        "format": "int32"
       },
       "ReplyMessageRequest": {
         "type": "object",

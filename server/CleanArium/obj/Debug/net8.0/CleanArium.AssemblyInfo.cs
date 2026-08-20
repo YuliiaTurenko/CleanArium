@@ -11,10 +11,11 @@
 using System;
 using System.Reflection;
 
+[assembly: Microsoft.Extensions.Configuration.UserSecrets.UserSecretsIdAttribute("cce91883-b3e9-4260-8c09-401407fc69c0")]
 [assembly: System.Reflection.AssemblyCompanyAttribute("CleanArium")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+de64a27f2eebc9d885d70a03b83e8c2a50b5db6a")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e268b3eb5288fecf21433308d2010195101aa9e4")]
 [assembly: System.Reflection.AssemblyProductAttribute("CleanArium")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CleanArium")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

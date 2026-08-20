@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Design;
-using Microsoft.EntityFrameworkCore.Migrations;
+using Microsoft.Extensions.Configuration;
 
 
 namespace Persistence.Application;
@@ -9,9 +9,18 @@ public class CleanAriumDbContextFactory : IDesignTimeDbContextFactory<CleanArium
 {
     public CleanAriumDbContext CreateDbContext(string[] args)
     {
+        var configuration = new ConfigurationBuilder()
+            .SetBasePath(Path.Combine(Directory.GetCurrentDirectory(), "../CleanArium"))
+            .AddJsonFile("appsettings.json")
+            .Build();
+
+        var connectionString = configuration.GetConnectionString("DefaultConnection");
+
         var optionsBuilder = new DbContextOptionsBuilder<CleanAriumDbContext>();
-        optionsBuilder.UseSqlServer("DefaultConnection",
-            builder => builder.MigrationsHistoryTable(HistoryRepository.DefaultTableName, "CleanArium"));
+
+        optionsBuilder.UseSqlServer(
+            connectionString,
+            b => b.MigrationsAssembly("Persistence"));
 
         return new CleanAriumDbContext(optionsBuilder.Options);
     }

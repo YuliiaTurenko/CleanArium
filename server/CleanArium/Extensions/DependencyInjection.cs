@@ -53,12 +53,12 @@ using FluentValidation;
 using Infrastructure.AdminSeed;
 using Infrastructure.Authentication;
 using Infrastructure.Security;
+using Infrastructure.Services;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
 using Persistence.Application;
 using Persistence.Repositories;
 using Persistence.Services;
-using Persistence.Services.Token;
 
 namespace CleanArium.Extensions;
 
@@ -89,6 +89,8 @@ public static class DependencyInjection
         services.AddScoped<IExecutedCommandRepository, ExecutedCommandRepository>();
         services.AddScoped<ISensorDataRepository, SensorDataRepository>();
 
+        services.AddScoped<IKubernetesService, KubernetesService>();
+        services.AddScoped<IKubernetesConfigGenerator, KubernetesConfigGenerator>();
         services.AddScoped<IPasswordHasher, PasswordHasher>();
         services.Configure<JwtSettings>(configuration.GetSection("JwtSettings"));
         services.AddScoped<IJwtTokenService, JwtTokenService>();
