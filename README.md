@@ -129,17 +129,17 @@ Several common architectural patterns are used throughout the backend.
 **DTO Pattern**: DTOs are used to define data transferred between the API and clients without exposing internal domain or persistence models directly.
 **Middleware**: Custom middleware is used for cross-cutting concerns such as centralized exception handling.
 
-## Database
-The project uses **Microsoft SQL Server** with **Entity Framework Core**. Database schema changes are managed through EF Core migrations.
-During application startup, the database migration process can be executed before the application begins serving requests. This ensures that the database schema is synchronized with the version of the application being deployed.
-The application also includes an administrator seeding mechanism for creating the initial administrative user.
-
-# API Documentation
-The backend provides interactive API documentation using **Swagger / OpenAPI**. Swagger is used during development and demonstration to:
+## API Documentation
+The backend provides interactive API documentation using Swagger / OpenAPI. Swagger is used during development and demonstration to:
 -   inspect available endpoints;
 -   test API operations;
 -   provide JWT authentication for protected endpoints;
 -   verify backend functionality independently of the frontend.
+-   
+## Database
+The project uses **Microsoft SQL Server** with **Entity Framework Core**. Database schema changes are managed through EF Core migrations.
+During application startup, the database migration process can be executed before the application begins serving requests. This ensures that the database schema is synchronized with the version of the application being deployed.
+The application also includes an administrator seeding mechanism for creating the initial administrative user.
 
 ## Frontend
 The frontend communicates with the ASP.NET Core API through HTTP requests and uses JWT authentication for protected operations.
